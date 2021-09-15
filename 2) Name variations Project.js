@@ -16,6 +16,52 @@ Lower case	          jayanthi
 Upper case	          JAYANTHI
 Capitalize	          Jayanthi
 
+
+variation.js: //This is the answer part.
+
+/** @param {string} name */
+export function getNumberOfChars(name) {
+    // number of characters in: name
+    return name.length;
+}
+
+/** @param {string} name */
+export function getFirstChar(name) {
+    // first character of: name
+    let f = name.substring(0,1)
+    return f;//.toUpperCase();
+}
+
+/** @param {string} name */
+export function getLastChar(name) {
+    // last character of: name
+    let l = name.substring(name.length-1,name.length);
+    return l;//.toLowerCase();
+}
+
+
+/** @param {string} name */
+export function getLower(name) {
+    // name all in lower case (example: "ABC" becomes "abc")
+    return name.toLowerCase();
+}
+
+/** @param {string} name */
+export function getUpper(name) {
+    // name all in upper case (example: "abc" becomes "ABC")
+    return name.toUpperCase();
+}
+
+/** @param {string} name */
+export function getCapitalized(name) {
+    // capitalized version of name (example: "alEX" becomes "Alex")
+    let f = name.substring(0,1);
+    let l = name.substring(1,name.length);
+    return f.toUpperCase()+l.toLowerCase();
+}
+//Answer ends.
+
+
 index.html:
 <nav class="navbar">
     <h1 class="nav-brand">Name variations</h1>
@@ -62,49 +108,6 @@ index.html:
             </tbody>
     </table>
 </main>
-
-variation.js: //This is the answer part.
-
-/** @param {string} name */
-export function getNumberOfChars(name) {
-    // number of characters in: name
-    return name.length;
-}
-
-/** @param {string} name */
-export function getFirstChar(name) {
-    // first character of: name
-    let f = name.substring(0,1)
-    return f.toUpperCase();
-}
-
-/** @param {string} name */
-export function getLastChar(name) {
-    // last character of: name
-    let l = name.substring(name.length-1,name.length);
-    return l.toLowerCase();
-}
-
-/** @param {string} name */
-export function getLower(name) {
-    // name all in lower case (example: "ABC" becomes "abc")
-    return name.toLowerCase();
-}
-
-/** @param {string} name */
-export function getUpper(name) {
-    // name all in upper case (example: "abc" becomes "ABC")
-    return name.toUpperCase();
-}
-
-/** @param {string} name */
-export function getCapitalized(name) {
-    // capitalized version of name (example: "alEX" becomes "Alex")
-    let f = name.substring(0,1);
-    let l = name.substring(1,name.length);
-    return f.toUpperCase()+l.toLowerCase();
-}
-//Answer ends.
 
 index.js:
 import {getNumberOfChars, getFirstChar, getLastChar, getLower, getUpper, getCapitalized} from "./variations.js";
